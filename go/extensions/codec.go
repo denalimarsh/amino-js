@@ -5,5 +5,7 @@ import (
 )
 
 func RegisterCodec(codec *amino.Codec) {
-	codec.RegisterConcrete(TxCreateMarket{}, "microtick/CreateMarket", nil)
+	codec.RegisterConcrete(MsgCreateEthBridgeClaim{}, "bridge/CreateEthBridgeClaim", nil)
+	codec.RegisterConcrete(MsgBurn{}, "bridge/Burn", nil)
+	codec.RegisterConcrete(MsgLock{}, "bridge/Lock", nil)
 }
