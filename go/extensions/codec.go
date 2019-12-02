@@ -5,7 +5,7 @@ import (
 )
 
 func RegisterCodec(codec *amino.Codec) {
-	codec.RegisterConcrete(MsgCreateEthBridgeClaim{}, "bridge/CreateEthBridgeClaim", nil)
-	codec.RegisterConcrete(MsgBurn{}, "bridge/Burn", nil)
-	codec.RegisterConcrete(MsgLock{}, "bridge/Lock", nil)
+	codec.RegisterConcrete(MsgCreateEthBridgeClaim{}, "bridge/MsgCreateEthBridgeClaim", nil)
+	codec.RegisterConcrete(MsgBurn{}, "bridge/MsgBurn", nil)
+	codec.RegisterConcrete(MsgLock{}, "bridge/MsgLock", nil)
 }
