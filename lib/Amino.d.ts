@@ -1534,6 +1534,17 @@ export function encodeMockRandomGoodEvidence (json: JSONBytes, lengthPrefixed: b
  */
 export function encodeMockBadEvidence (json: JSONBytes, lengthPrefixed: boolean): AminoBytes;
 
+/**
+ * Encode a `BridgeTx` object from JSON to Amino
+ *
+ * @param   json           - binary JSON-encoded `BridgeTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns binary Amino-encoded `BridgeTx` object
+ * @throws  will throw if encoding fails
+ */
+export function encodeBridgeTx (json: JSONBytes, lengthPrefixed: boolean): AminoBytes;
+
 // Typed decoding
 /**
  * Decode a `MultiStoreProofOp` object from Amino to JSON
@@ -2656,3 +2667,25 @@ export function decodeMockRandomGoodEvidence (amino: AminoBytes, lengthPrefixed:
  * @throws  will throw if decoding fails
  */
 export function decodeMockBadEvidence (amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
+
+/**
+ * Decode a `BridgeTx` object from Amino to JSON
+ *
+ * @param   amino          - binary Amino-encoded `object ` object
+ * @param   lengthPrefixed - if true, use length-prefixed Amino decoding; if false, use bare Amino decoding
+ *
+ * @returns binary JSON-encoded `BridgeTx` object
+ * @throws  will throw if decoding fails
+ */
+export function decodeBridgeTx (amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
+
+// /**
+//  * Decode a `decodeMsgBurn` object from Amino to JSON
+//  *
+//  * @param   amino          - binary Amino-encoded `decodeMsgBurn` object
+//  * @param   lengthPrefixed - if true, use length-prefixed Amino decoding; if false, use bare Amino decoding
+//  *
+//  * @returns binary JSON-encoded `decodeMsgBurn` object
+//  * @throws  will throw if decoding fails
+//  */
+// export function decodeMsgBurn (amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;

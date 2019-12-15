@@ -100,5 +100,7 @@ export {
     decodeDuplicateVoteEvidence,
     decodeMockGoodEvidence,
     decodeMockRandomGoodEvidence,
-    decodeMockBadEvidence
+    decodeMockBadEvidence,
+    decodeBridgeTx
+    // decodeMsgBurn
 } from '../lib/Amino';
