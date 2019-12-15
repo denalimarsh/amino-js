@@ -2678,14 +2678,3 @@ export function decodeMockBadEvidence (amino: AminoBytes, lengthPrefixed: boolea
  * @throws  will throw if decoding fails
  */
 export function decodeBridgeTx (amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
-
-// /**
-//  * Decode a `decodeMsgBurn` object from Amino to JSON
-//  *
-//  * @param   amino          - binary Amino-encoded `decodeMsgBurn` object
-//  * @param   lengthPrefixed - if true, use length-prefixed Amino decoding; if false, use bare Amino decoding
-//  *
-//  * @returns binary JSON-encoded `decodeMsgBurn` object
-//  * @throws  will throw if decoding fails
-//  */
-// export function decodeMsgBurn (amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;

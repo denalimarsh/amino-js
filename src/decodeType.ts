@@ -102,5 +102,4 @@ export {
     decodeMockRandomGoodEvidence,
     decodeMockBadEvidence,
     decodeBridgeTx
-    // decodeMsgBurn
 } from '../lib/Amino';
