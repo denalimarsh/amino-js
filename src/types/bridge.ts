@@ -18,9 +18,6 @@ export interface BridgeResponseTx {
     gasUsed:              string;          
     events:               BridgeMsg[];
     codespace:            string;
-    XXX_NoUnkeyedLiteral?: string;
-    XXX_unrecognized?:     string;
-    XXX_sizecache?:        string;
 }
 
 interface BridgeMsg {
