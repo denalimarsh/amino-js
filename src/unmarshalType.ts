@@ -102,7 +102,8 @@ import {
     VoteMessage,
     VoteSetBitsMessage,
     VoteSetMaj23Message,
-    WALMessage
+    WALMessage,
+    BridgeTx
 } from './types';
 import { unmarshalJSON } from './util';
 
@@ -1531,5 +1532,19 @@ export function unmarshalMockRandomGoodEvidence (amino: AminoBytes, lengthPrefix
  */
 export function unmarshalMockBadEvidence (amino: AminoBytes, lengthPrefixed: boolean = true): MockBadEvidence {
     const json = decodeType.decodeMockBadEvidence(amino, lengthPrefixed);
+    return unmarshalJSON(json);
+}
+
+/**
+ * Unmarshal a `BridgeTx` object from Amino
+ *
+ * @param   amino          - binary Amino-encoded `BridgeTx` object
+ * @param   lengthPrefixed - if true, use length-prefixed Amino decoding; if false, use bare Amino decoding
+ *
+ * @returns `BridgeTx` object
+ * @throws  will throw if decoding fails
+ */
+export function unmarshalBridgeTx (amino: AminoBytes, lengthPrefixed: boolean = true): BridgeTx {
+    const json = decodeType.decodeBridgeTx(amino, lengthPrefixed);
     return unmarshalJSON(json);
 }

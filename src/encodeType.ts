@@ -100,5 +100,6 @@ export {
     encodeDuplicateVoteEvidence,
     encodeMockGoodEvidence,
     encodeMockRandomGoodEvidence,
-    encodeMockBadEvidence
+    encodeMockBadEvidence,
+    encodeBridgeTx
 } from '../lib/Amino';

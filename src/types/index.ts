@@ -1,6 +1,7 @@
 export * from './auth';
 export * from './bank';
 export * from './blockchain';
+export * from './bridge';
 export * from './conn';
 export * from './consensus';
 export * from './crisis';

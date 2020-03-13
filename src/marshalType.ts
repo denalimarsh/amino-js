@@ -102,7 +102,8 @@ import {
     VoteMessage,
     VoteSetBitsMessage,
     VoteSetMaj23Message,
-    WALMessage
+    WALMessage,
+    BridgeTx
 } from './types';
 import { marshalJSON } from './util';
 
@@ -1532,4 +1533,18 @@ export function marshalMockRandomGoodEvidence (o: MockRandomGoodEvidence, length
 export function marshalMockBadEvidence (o: MockBadEvidence, lengthPrefixed: boolean = true): AminoBytes {
     const json = marshalJSON(o);
     return encodeType.encodeMockBadEvidence(json, lengthPrefixed);
+}
+
+/**
+ * Marshal a `BridgeTx` object to Amino
+ *
+ * @param   o              - `BridgeTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns binary Amino-encoded `BridgeTx` object
+ * @throws  will throw if encoding fails
+ */
+export function marshalBridgeTx (o: BridgeTx, lengthPrefixed: boolean = true): AminoBytes {
+    const json = marshalJSON(o);
+    return encodeType.encodeBridgeTx(json, lengthPrefixed);
 }
